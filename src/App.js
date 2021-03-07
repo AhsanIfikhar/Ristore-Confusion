@@ -3,19 +3,31 @@ import React,{Component} from 'react';
 import {Navbar, NavbarBrand} from 'reactstrap';
 import Menu from './components/MenuComponent';
 import './App.css';
+import {DISHES} from './components/shared/dishes';
 
 class App extends Component
 {
+  constructor(props)
+  {
+    super(props);
+    
+    this.state={
+      dishes:DISHES
+    }
+  }
+
   render()
   {
+
     return (
       <div>
         <Navbar dark color="primary">
           <div className="container">
             <NavbarBrand href="/">Ahsan's Ristorante Con Fusion</NavbarBrand>
+            
           </div>
         </Navbar>
-        <Menu />
+        <Menu dishes={this.state.dishes} />
       </div>
     );
   }
