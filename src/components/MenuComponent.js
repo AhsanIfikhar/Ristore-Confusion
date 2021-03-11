@@ -3,7 +3,7 @@ import {
     Card, CardImg,
     CardTitle, CardImgOverlay
   } from 'reactstrap';
-import Dishdetail from './dishdetailcomonent';
+import Dishdetail from './dishdetailcomponent';
 
 class Menu extends Component
 {
@@ -30,7 +30,8 @@ class Menu extends Component
     
                 {this.props.dishes.map((dish)=>
                 <div key={dish.id} className="col-12 col-md-5 m-1">
-                    <Card onClick={()=> this.onDishSelect(dish)}>
+                     <Card key={dish.id}
+                        onClick={() => this.props.onClick(dish.id)}>
                      
                         <CardImg width="100%" object src={dish.image} alt={dish.name}/>
 

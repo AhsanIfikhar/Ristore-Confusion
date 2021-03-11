@@ -29,7 +29,7 @@ class Dishdetail extends Component {
                         {   
                         dish.comments.map((com) => 
                         <div>
-                            {com.comment}<br /><br />--{com.author} , {com.date} <br /><br />
+                            {com.comment}<br /><br />--{com.author} , {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(com.date)))} <br /><br />
                         </div>
                         )}
                         </div>
