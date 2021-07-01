@@ -21,9 +21,7 @@ function About(props) {
         );
     });
 
-    function RenderLeader({props}){
-        
-    }
+
     return(
         <div className="container">
             <div className="row">

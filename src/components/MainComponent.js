@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import Menu from './MenuComponent';
 import DishDetail from './dishdetailcomponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
